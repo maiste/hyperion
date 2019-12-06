@@ -3,13 +3,15 @@
 # * Étienne "Maiste Marais *
 # **************************
 
+EXE=hyperion
+
 all: build
 
 build: src/hyperion/main.go
-	go build -o hyperion $<
+	go build -o $(EXE) $<
 
 run: build
-	./main
+	./$(EXE)
 
 clear: 
-	rm -rf main
+	rm -rf $(EXE)
