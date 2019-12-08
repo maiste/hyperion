@@ -20,13 +20,23 @@ func Display() {
 /* Test connection with the server */
 func handleTest(w http.ResponseWriter, r* http.Request) {
   fmt.Println("[TEST] Connection")
-  fmt.Fprintf(w, "SERVER ON")
+  w.WriteHeader(http.StatusOK)
 }
 
+/* Handle template download */
 func handleTemplate(w http.ResponseWriter, r* http.Request) {
   request := mux.Vars(r)
-  template := request["template"]
+  template := "templates/" + request["template"]
   fmt.Println("[REQUEST] Download", template)
+  rawTemplate, err := ImportJson(template)
+  if err != nil {
+    fmt.Println("[ERROR]", err)
+    w.WriteHeader(http.StatusNotFound)
+  } else {
+    w.Header().Set("Content-Type", "application/json")
+    w.WriteHeader(http.StatusOK)
+    w.Write(rawTemplate)
+  }
 }
 
 /* Handle connextions on port 8080 */
