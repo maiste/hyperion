@@ -40,9 +40,10 @@ func handleTemplate(w http.ResponseWriter, r* http.Request) {
 }
 
 /* Handle connextions on port 8080 */
-func ConnectionHandler() {
+func ConnectionHandler(port string) {
+  port = ":" + port
   route := mux.NewRouter().StrictSlash(true)
   route.HandleFunc("/", handleTest)
   route.HandleFunc("/{template}", handleTemplate)
-  log.Fatal(http.ListenAndServe(":8080", route))
+  log.Fatal(http.ListenAndServe(port, route))
 }
