@@ -1,7 +1,7 @@
 # hyperion
  
 ## What is Hyperion ?
-Hyperion is a Golang RESTApi server for the eos project.
+Hyperion is a Golang RESTApi server for the eos project and golactus.
 
 ## Build hyperion
 To build Hyperion you can use the **make** command.
