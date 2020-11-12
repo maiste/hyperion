@@ -24,3 +24,7 @@ Hyperion is in the dockerhub. You can use it as follow:
 ```sh
 docker run --rm -d --name hyperion -p <port>:8080 -v <path_to_template>:/templates maiste/hyperion:latest
 ```
+
+## WIP
+
+Hyperion will be move to rust to support higher performance.
