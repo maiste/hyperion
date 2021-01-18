@@ -1,4 +1,6 @@
-# hyperion
+To have a lighter image and faster, it was replaced by [Hugin](https://github.com/maiste/hyperion). It still works on Docker but is no longer maintained.
+
+# hyperion (ARCHIVED)
  
 ## What is Hyperion ?
 Hyperion is a Golang RESTApi server for the eos project and golactus.
