@@ -1,4 +1,4 @@
-To have a lighter image and faster, it was replaced by [Hugin](https://github.com/maiste/hyperion). It still works on Docker but is no longer maintained.
+To have a lighter image and faster, it was replaced by [Hugin](https://github.com/maiste/hugin). It still works on Docker but is no longer maintained.
 
 # hyperion (ARCHIVED)
  
